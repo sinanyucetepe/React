@@ -18,11 +18,10 @@ const friends = [
 function App() {
   return(
     <>
-    <User name="Sinan" surname = "Yucetepe" isLoggedIn= {true} age={26} friends ={ friends} />
-
-    
+      <User name={"Sinan"} surname = "Yucetepe" isLoggedIn= {true} age={26} 
+      //friends ={ friends} 
+      />
     </>
   );
 }
-
 export default App
