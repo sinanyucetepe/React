@@ -18,7 +18,8 @@ const friends = [
 function App() {
   return(
     <>
-      <User name="Sinan" 
+      <User 
+      // name="Sinan" 
       surname = "Yucetepe" 
       isLoggedIn= {true} 
       age={"26"} 

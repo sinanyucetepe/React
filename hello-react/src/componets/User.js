@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 function User({name, surname, isLoggedIn, age, friends, adress}) {
+
+    if (!isLoggedIn) {
+        return <div>You did not login</div>
+    }
     return (
     <>
         <h1> 
-        {isLoggedIn ? `${name} ${surname} (${age}) `  : "You did not login"}
-        </h1>
+        { `${name} ${surname} (${age}) `} </h1>
         <h3> {adress.title} {adress.zip } </h3> <br />
         {friends && friends.map((friend) => 
             <div key={friend.id}> {friend.name} </div> )
@@ -22,6 +25,10 @@ User.propTypes = {
         title: PropTypes.string,
         zip: PropTypes.number,
     }),
-
+};
+User.defaultProps = {
+    name: 'No name',
+    isLoggedIn: false,
 }
+
 export default User;
