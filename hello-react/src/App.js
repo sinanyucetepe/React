@@ -18,8 +18,15 @@ const friends = [
 function App() {
   return(
     <>
-      <User name="Sinan" surname = "Yucetepe" isLoggedIn= {true} age={"26"} 
+      <User name="Sinan" 
+      surname = "Yucetepe" 
+      isLoggedIn= {true} 
+      age={"26"} 
       friends ={ friends} 
+      adress= {{
+        title: 'Izmir',
+        zip:35000,
+      }}
       />
     </>
   );
