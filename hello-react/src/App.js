@@ -1,12 +1,15 @@
 import './App.css';
-import Header from './componets/Header'
+import User from './componets/User';
+//import Header from './componets/Header'
+
 function App() {
   return(
-    <div>
-      <h1>Hello React</h1>
-      <Header/>
-    </div>
-  )
+    <>
+    <User name="Sinan" surname = "Yucetepe" isLoggedIn= {true} age={26} />
+
+    
+    </>
+  );
 }
 
 export default App
