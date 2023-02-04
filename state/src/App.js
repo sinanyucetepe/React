@@ -4,6 +4,7 @@ function App() {
   const [name, setName] = useState('Sinan');
   const [age, setAge] = useState(26);
   const [friends, setFriends] = useState( [ "Jack", "Jesse"]);
+  const [address, setAddress] = useState( {title:'Izmir', zip: 35000 });
   return (
     <div className="App">
       <h1>Hello {name}!</h1>
@@ -20,7 +21,19 @@ function App() {
       
       <br />
 
-      <button onClick={() => setFriends([ "Jany", ...friends])}> Add a new friend</button> // protect your data previous
+      <button onClick={() => setFriends([ "Jany", ...friends])}> Add a new friend</button> 
+      {/* // protect your data previous */}
+   
+      <hr /> 
+      <br /> <br />
+      <h2> Address</h2>
+      <div>{address.title} {address.zip}</div>  
+   
+      <br />
+
+      <button onClick={() => setAddress({...address, title: 'Istanbul ', zip:34000})}> Change city</button> 
+
+
     </div>
   );
 }
