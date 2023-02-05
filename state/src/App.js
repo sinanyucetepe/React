@@ -11,29 +11,21 @@ function App() {
       <h2>{age}</h2>
       <button onClick={() => setName("Tom")}> Click to new name </button>
       <button onClick={() => setAge("20")}> Click to return 20s</button>
-    
     <hr /> <br /> <br />
     <h2>Friends</h2>
     { 
       friends.map((friend, index) => (
         <div key={index}> {friend}</div> 
       ))}
-      
       <br />
-
       <button onClick={() => setFriends([ "Jany", ...friends])}> Add a new friend</button> 
       {/* // protect your data previous */}
-   
       <hr /> 
       <br /> <br />
       <h2> Address</h2>
       <div>{address.title} {address.zip}</div>  
-   
       <br />
-
       <button onClick={() => setAddress({...address, title: 'Istanbul ', zip:34000})}> Change city</button> 
-
-
     </div>
   );
 }
