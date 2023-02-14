@@ -4,9 +4,9 @@ function App() {
   const [isVisible, setIsVisible]  = useState(true)
   return (
     <div className="App">
-
-    <Counter/>
-    <button onClick={()=> setIsVisible(false) }>Toggle</button>
+      {isVisible && <Counter />}
+    <br />
+    <button onClick={()=> setIsVisible(!isVisible) }>Toggle Counter</button>
     </div>
 
   );
