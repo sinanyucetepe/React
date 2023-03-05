@@ -1,6 +1,6 @@
 import './App.css';
 import User from './componets/User';
-//import Header from './componets/Header'
+// import Header from './componets/Header'
 const friends = [
   {
     id: 1,
